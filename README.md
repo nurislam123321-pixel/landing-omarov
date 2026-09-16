@@ -6,9 +6,8 @@
 
 ## Ссылка на сайт
 
-https://<login>.github.io/landing-omarov/
+https://nurislam123321-pixel.github.io/landing-omarov/
 
-*(замените `<login>` на свой логин GitHub после публикации через GitHub Pages)*
 
 ## Что сделано
 
