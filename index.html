@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дастар — доставка домашней еды в Алматы за 30 минут</title>
+  <meta name="description" content="Дастар — сервис доставки домашней еды в Алматы: бизнес-ланчи, национальная кухня, веганское меню и десерты с доставкой за 30 минут.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#top" class="logo">Дастар</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Открыть меню навигации">
+        <span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#how">Как это работает</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__content">
+          <h1 id="hero-title">Домашняя еда за 30 минут, без разогрева и очередей</h1>
+          <p class="hero__lede">Дастар собирает лучшие домашние кухни Алматы в одном заказе. Готовим утром, привозим горячим — вы просто садитесь есть.</p>
+          <div class="hero__actions">
+            <a href="#menu" class="btn btn-primary">Смотреть меню</a>
+            <a href="#how" class="btn btn-ghost">Как это работает</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <b>30 мин</b>
+              <span>среднее время доставки</span>
+            </div>
+            <div class="hero__stat">
+              <b>120+</b>
+              <span>блюд в меню</span>
+            </div>
+            <div class="hero__stat">
+              <b>4.8</b>
+              <span>средняя оценка клиентов</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__art">
+          <img src="images/hero.svg" alt="Тарелка домашнего плова с паром, поднимающимся над блюдом">
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="menu-title">Меню на любой день недели</h2>
+          <p>Четыре направления кухни — вы выбираете, что съесть сегодня, а мы держим это горячим до вашей двери.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <img src="images/menu-lunch.svg" alt="Бизнес-ланч: горячее блюдо, салат и компот на подносе">
+            <div class="menu-card__body">
+              <h3>Бизнес-ланчи</h3>
+              <p>Полный обед с супом или салатом — привозим к обеденному перерыву день в день.</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img src="images/menu-national.svg" alt="Казан с бешбармаком на деревянной подставке">
+            <div class="menu-card__body">
+              <h3>Национальная кухня</h3>
+              <p>Бешбармак, манты и плов от поваров, которые готовят их с детства.</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img src="images/menu-vegan.svg" alt="Миска со свежим овощным веганским салатом">
+            <div class="menu-card__body">
+              <h3>Веганское меню</h3>
+              <p>Сытные блюда без животных продуктов — с указанием состава и калорийности.</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img src="images/menu-dessert.svg" alt="Кусок торта с ягодой сверху">
+            <div class="menu-card__body">
+              <h3>Десерты</h3>
+              <p>Домашняя выпечка на вечер — добавляется к любому заказу одним касанием.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section section--alt" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="how-title">Как это работает</h2>
+          <p>От выбора блюда до горячего обеда на столе — три шага, без звонков и уточнений адреса по телефону.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Выберите блюда</h3>
+            <p>Соберите заказ из меню на день или подпишитесь на бизнес-ланч на всю неделю.</p>
+          </div>
+          <div class="step">
+            <h3>Подтвердите адрес и время</h3>
+            <p>Укажите, куда и к какому часу привезти заказ — курьер приедет в выбранный интервал.</p>
+          </div>
+          <div class="step">
+            <h3>Получите горячим</h3>
+            <p>Еда едет в термосумке, поэтому доходит такой же, какой вышла с кухни.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="reviews-title">Что говорят клиенты</h2>
+          <p>Отзывы людей, которые заказывают у нас на постоянной основе.</p>
+        </div>
+        <div class="reviews">
+          <article class="review">
+            <p>Заказываю бизнес-ланч почти каждый будний день — привозят точно к обеду, ни разу не опоздали.</p>
+            <div class="review__author">
+              <div class="review__avatar" aria-hidden="true">А</div>
+              <div>
+                <strong>Алия К.</strong>
+                <span>Офис в БЦ Esentai</span>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <p>Бешбармак почти как у бабушки — давно не встречал такого вкуса в доставке.</p>
+            <div class="review__author">
+              <div class="review__avatar" aria-hidden="true">Е</div>
+              <div>
+                <strong>Ерлан Т.</strong>
+                <span>Медеуский район</span>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <p>Веганское меню наконец без компромиссов — сытно и по составу всё понятно.</p>
+            <div class="review__author">
+              <div class="review__avatar" aria-hidden="true">Д</div>
+              <div>
+                <strong>Дана С.</strong>
+                <span>Бостандыкский район</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--alt contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__info">
+          <div class="section__head">
+            <h2 id="contact-title">Свяжитесь с нами</h2>
+            <p>Есть вопрос по заказу для офиса или мероприятия? Напишите — ответим в течение рабочего дня.</p>
+          </div>
+          <address>
+            <p><strong>Адрес:</strong> Алматы, ул. Байзакова, 280</p>
+            <p><strong>Телефон:</strong> <a href="tel:+77271234567">+7 727 123-45-67</a></p>
+            <p><strong>Почта:</strong> <a href="mailto:hello@dastar.kz">hello@dastar.kz</a></p>
+            <p><strong>Часы работы:</strong> ежедневно, 09:00–22:00</p>
+          </address>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+          <p class="form-note">Нажимая «Отправить», вы соглашаетесь на обработку данных для ответа на обращение.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Дастар. Доставка домашней еды в Алматы.</p>
+      <p>Учебный проект — HTML5 &amp; CSS3, IT1-2310</p>
+    </div>
+  </footer>
+
+</body>
+</html>

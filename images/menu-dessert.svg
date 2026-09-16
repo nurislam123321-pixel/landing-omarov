@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dessertTitle">
+  <title id="dessertTitle">Десерты: кусок торта с ягодой сверху</title>
+  <rect width="200" height="160" fill="#FAF7F0"/>
+  <path d="M70 130 L130 130 L120 70 L80 70 Z" fill="#EAC24B"/>
+  <rect x="76" y="95" width="48" height="8" fill="#FAF7F0" opacity="0.8"/>
+  <rect x="72" y="118" width="56" height="8" fill="#FAF7F0" opacity="0.8"/>
+  <path d="M78 70 L122 70 L118 58 L82 58 Z" fill="#B23A2E"/>
+  <circle cx="100" cy="52" r="8" fill="#7A2B22"/>
+  <ellipse cx="70" cy="132" rx="60" ry="8" fill="#22241F" opacity="0.08"/>
+</svg>

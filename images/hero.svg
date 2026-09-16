@@ -1,0 +1,33 @@
+<svg viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Тарелка с домашним пловом, из которой поднимается пар</title>
+  <ellipse cx="280" cy="410" rx="200" ry="26" fill="#22241F" opacity="0.08"/>
+  <!-- steam -->
+  <path d="M220 120 C210 95 235 90 228 65 C222 45 240 40 236 18" stroke="#1F3D2B" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <path d="M280 120 C270 95 295 90 288 65 C282 45 300 40 296 18" stroke="#1F3D2B" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M340 120 C330 95 355 90 348 65 C342 45 360 40 356 18" stroke="#1F3D2B" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <!-- plate -->
+  <ellipse cx="280" cy="300" rx="220" ry="140" fill="#EFE9DB"/>
+  <ellipse cx="280" cy="292" rx="220" ry="140" fill="#FAF7F0" stroke="#D8D0BC" stroke-width="4"/>
+  <ellipse cx="280" cy="292" rx="168" ry="104" fill="#E3A712" opacity="0.14"/>
+  <!-- rice -->
+  <ellipse cx="280" cy="300" rx="150" ry="88" fill="#E3A712"/>
+  <ellipse cx="280" cy="292" rx="150" ry="86" fill="#EAC24B"/>
+  <!-- carrots -->
+  <path d="M170 260 q40 -18 70 4" stroke="#B23A2E" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M330 250 q42 -14 66 10" stroke="#B23A2E" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M220 320 q46 20 90 2" stroke="#B23A2E" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <!-- meat pieces -->
+  <circle cx="230" cy="280" r="20" fill="#7A3A22"/>
+  <circle cx="330" cy="300" r="24" fill="#7A3A22"/>
+  <circle cx="290" cy="250" r="16" fill="#7A3A22"/>
+  <!-- garlic -->
+  <circle cx="280" cy="230" r="22" fill="#FAF7F0" stroke="#D8D0BC" stroke-width="3"/>
+  <path d="M280 210 v40 M262 230 h36" stroke="#D8D0BC" stroke-width="2"/>
+  <!-- herbs -->
+  <g fill="#1F3D2B">
+    <circle cx="200" cy="230" r="4"/>
+    <circle cx="360" cy="270" r="4"/>
+    <circle cx="240" cy="340" r="4"/>
+    <circle cx="320" cy="335" r="4"/>
+  </g>
+</svg>

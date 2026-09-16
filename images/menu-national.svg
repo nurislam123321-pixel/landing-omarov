@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="natTitle">
+  <title id="natTitle">Национальная кухня: казан с бешбармаком на подставке</title>
+  <rect width="200" height="160" fill="#FAF7F0"/>
+  <path d="M60 90 a40 40 0 0 0 80 0 z" fill="#1F3D2B"/>
+  <ellipse cx="100" cy="90" rx="40" ry="10" fill="#22241F" opacity="0.15"/>
+  <rect x="90" y="60" width="20" height="18" rx="4" fill="#22241F"/>
+  <rect x="70" y="130" width="60" height="10" rx="4" fill="#B23A2E"/>
+  <rect x="80" y="115" width="40" height="18" rx="3" fill="#EAC24B"/>
+  <path d="M85 118 h30 M85 124 h30" stroke="#22241F" stroke-width="2" opacity="0.4"/>
+</svg>

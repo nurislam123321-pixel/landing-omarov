@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="lunchTitle">
+  <title id="lunchTitle">Бизнес-ланч: тарелка с горячим блюдом, салатом и компотом</title>
+  <rect width="200" height="160" fill="#FAF7F0"/>
+  <ellipse cx="75" cy="115" rx="55" ry="18" fill="#EFE9DB"/>
+  <ellipse cx="75" cy="108" rx="55" ry="18" fill="#FAF7F0" stroke="#D8D0BC" stroke-width="3"/>
+  <ellipse cx="75" cy="108" rx="34" ry="10" fill="#EAC24B"/>
+  <ellipse cx="60" cy="105" rx="10" ry="7" fill="#1F3D2B" opacity="0.6"/>
+  <ellipse cx="88" cy="110" rx="9" ry="6" fill="#B23A2E" opacity="0.8"/>
+  <circle cx="160" cy="95" r="20" fill="#E3A712"/>
+  <rect x="152" y="60" width="16" height="30" rx="6" fill="#E3A712"/>
+</svg>
