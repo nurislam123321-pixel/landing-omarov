@@ -28,7 +28,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 17px;
+  /* clamp() — плавный размер шрифта без media-запроса на каждый шаг */
+  font-size: clamp(15px, 0.9vw + 13px, 17px);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -58,6 +59,7 @@ p { margin: 0; }
 }
 
 /* ---------- Buttons ---------- */
+/* Нативный CSS nesting (без Sass) — модификаторы кнопки вложены прямо в .btn */
 .btn {
   display: inline-block;
   font-family: var(--font-body);
@@ -69,19 +71,24 @@ p { margin: 0; }
   border: 2px solid transparent;
   cursor: pointer;
   transition: transform 0.15s ease, background 0.15s ease;
+
+  &:hover { transform: translateY(-2px); }
+
+  &.btn-primary {
+    background: var(--forest);
+    color: var(--bg);
+
+    &:hover { background: var(--forest-dark); }
+  }
+
+  &.btn-ghost {
+    background: transparent;
+    color: var(--forest);
+    border-color: var(--forest);
+
+    &:hover { background: var(--forest); color: var(--bg); }
+  }
 }
-.btn:hover { transform: translateY(-2px); }
-.btn-primary {
-  background: var(--forest);
-  color: var(--bg);
-}
-.btn-primary:hover { background: var(--forest-dark); }
-.btn-ghost {
-  background: transparent;
-  color: var(--forest);
-  border-color: var(--forest);
-}
-.btn-ghost:hover { background: var(--forest); color: var(--bg); }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -90,15 +97,22 @@ p { margin: 0; }
   z-index: 20;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
-}
-.site-header .container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  gap: 24px;
+
+  /* :has() — шапка сама реагирует на открытое мобильное меню,
+     без единой строчки JavaScript */
+  &:has(.nav-toggle-input:checked) {
+    box-shadow: 0 8px 20px rgba(34, 36, 31, 0.1);
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    gap: 24px;
+  }
 }
 .logo {
   font-family: var(--font-display);
@@ -108,17 +122,20 @@ p { margin: 0; }
   color: var(--forest);
   letter-spacing: 0.01em;
 }
-.main-nav ul {
-  display: flex;
-  gap: 28px;
+.main-nav {
+  ul {
+    display: flex;
+    gap: 28px;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink-soft);
+
+    &:hover { color: var(--forest); }
+  }
 }
-.main-nav a {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--ink-soft);
-}
-.main-nav a:hover { color: var(--forest); }
 
 /* CSS-only mobile menu toggle (checkbox hack — no JavaScript needed) */
 .nav-toggle-input { display: none; }
@@ -214,24 +231,42 @@ p { margin: 0; }
 }
 
 /* ---------- Menu cards ---------- */
+/* Container queries — секция сама становится "контейнером", и грид
+   реагирует на СВОЮ ширину, а не на ширину всего окна браузера.
+   Это и есть замена media-запросам/Sass-миксинам в чистом CSS. */
+#menu {
+  container-type: inline-size;
+  container-name: menu;
+}
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr; /* по умолчанию — телефон, 1 карточка в ряд */
   gap: 24px;
 }
+@container menu (min-width: 600px) {
+  .menu-grid { grid-template-columns: repeat(2, 1fr); } /* планшет — 2 в ряд */
+}
+@container menu (min-width: 1024px) {
+  .menu-grid { grid-template-columns: repeat(4, 1fr); } /* десктоп — 4 в ряд */
+}
+
 .menu-card {
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-}
-.menu-card img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; }
-.menu-card__body { padding: 20px; }
-.menu-card h3 { font-size: 19px; }
-.menu-card p {
-  margin-top: 8px;
-  font-size: 15px;
-  color: var(--ink-soft);
+
+  img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; }
+
+  &__body { padding: 20px; }
+
+  h3 { font-size: 19px; }
+
+  p {
+    margin-top: 8px;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
 }
 
 /* ---------- How it works ---------- */
@@ -354,16 +389,25 @@ p { margin: 0; }
 }
 
 /* ==========================================================================
-   Responsive — tested at 375px and 1280px per assignment requirements
+   Адаптив — три ширины по заданию:
+   телефон до 599px, планшет 600–1023px, десктоп от 1024px.
+   Проверено на 375, 768 и 1280px (скриншоты в /screenshots).
    ========================================================================== */
-@media (max-width: 900px) {
-  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+
+/* Телефон + планшет (до 1024px): одноколоночные секции */
+@media (max-width: 1023px) {
   .steps { grid-template-columns: 1fr; }
   .reviews { grid-template-columns: 1fr; }
   .contact .container { grid-template-columns: 1fr; }
+  .hero .container {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .hero__art { order: -1; max-width: 320px; }
 }
 
-@media (max-width: 700px) {
+/* Только телефон (до 599px): бургер-меню и уменьшенные отступы */
+@media (max-width: 599px) {
   .nav-toggle-label { display: flex; }
   .main-nav {
     position: absolute;
@@ -375,32 +419,22 @@ p { margin: 0; }
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.25s ease;
-  }
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-    padding: 8px 24px 20px;
-  }
-  .main-nav a {
-    display: block;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--line);
+
+    ul {
+      flex-direction: column;
+      gap: 0;
+      padding: 8px 24px 20px;
+    }
+    a {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
   }
   .nav-toggle-input:checked ~ .main-nav {
     max-height: 320px;
   }
-  .hero .container {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-  .hero__art { order: -1; max-width: 280px; }
-  .menu-grid { grid-template-columns: 1fr 1fr; }
   .section { padding: 56px 0; }
   .hero { padding: 40px 0 56px; }
-}
-
-@media (max-width: 420px) {
-  body { font-size: 16px; }
-  .menu-grid { grid-template-columns: 1fr; }
   .hero__stats { gap: 24px; }
 }
